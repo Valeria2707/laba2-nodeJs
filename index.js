@@ -4,8 +4,8 @@ import { getController, postController, optionsController } from './controller.j
 
 const PORT = 3001;
 
-router.addRoute('/example', 'GET', getController);
+router.addRoute('/', 'GET', getController);
 router.addRoute('/example', 'POST', postController);
-router.addRoute('/', 'OPTIONS', optionsController);
+router.addRoute('/example', 'OPTIONS', optionsController);
 
 createHttpServer(router.getRoutes(), PORT);
