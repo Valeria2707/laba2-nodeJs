@@ -6,6 +6,6 @@ const PORT = 3001;
 
 router.addRoute('/example', 'GET', getController);
 router.addRoute('/example', 'POST', postController);
-router.addRoute('/example', 'OPTIONS', optionsController);
+router.addRoute('/', 'OPTIONS', optionsController);
 
 createHttpServer(router.getRoutes(), PORT);
