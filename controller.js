@@ -1,11 +1,13 @@
+import { successResponse } from './helpers.js';
+
 export const getController = (req, res, payload) => {
-  res.setHeader('content-type', 'application/json');
-  res.end(JSON.stringify({ message: `Hello ${req.socket.remoteAddress}`, payload }));
+  const responseData = { message: `Hello ${req.socket.remoteAddress}`, payload };
+  successResponse(res, responseData);
 };
 
 export const postController = (req, res, payload) => {
-  res.setHeader('content-type', 'application/json');
-  res.end(JSON.stringify({ user: payload }));
+  const responseData = { user: payload };
+  successResponse(res, responseData);
 };
 
 export const optionsController = (req, res) => {
